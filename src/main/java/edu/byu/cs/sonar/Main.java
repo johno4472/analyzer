@@ -32,6 +32,5 @@ class Main {
         reader1.setNewSentence(sentenceForReader1);
 
         System.out.println(reader1.getNewSentence());
-        //a comment I added at the end to commit a new change
     }
 }
