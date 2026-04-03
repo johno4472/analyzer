@@ -50,6 +50,9 @@ class CustomFileReader {
         return count;
     }
 
+    public void setCount(int value) {
+      count += value;
+    }
     /**
      * This will return the word at the given index in the text file
      *

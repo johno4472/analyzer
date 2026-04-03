@@ -49,5 +49,13 @@ class CustomFileReaderTest {
       CustomFileReader old = new CustomFileReader("tacos");
       CustomFileReader newOne = new CustomFileReader("tacos");
       assertEquals(old, newOne);
+      String test = "test";
+      assertAll("VerifyValues",
+              () -> assertNotEquals(null, old),
+              () -> assertNotEquals(test, old),
+              () -> newOne.setCount(7),
+              () -> assertNotEquals(old, newOne),
+              () -> assertEquals(" 7", newOne.toString())
+      );
     }
 }
