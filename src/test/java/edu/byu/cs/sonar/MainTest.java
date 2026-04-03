@@ -2,7 +2,10 @@ package edu.byu.cs.sonar;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.FileNotFoundException;
+
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class MainTest {
 
@@ -13,5 +16,12 @@ class MainTest {
 
         assertDoesNotThrow(() -> Main.main(args));
 
+    }
+
+    @Test
+    void testError() {
+      String[] args = {"readMe8.txt", "readMe2.txt", "readMe3.txt", "5"};
+
+      Main.main(args);
     }
 }
